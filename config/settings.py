@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'proxy.apps.ProxyConfig',
+    "channels",
+    "liveCalculator",
 ]
 
 MIDDLEWARE = [
@@ -122,3 +124,5 @@ STATIC_ROOT = os.getenv('STATIC_ROOT')
 
 MEDIA_URL = os.getenv('MEDIA_URL')
 MEDIA_ROOT = os.getenv('MEDIA_ROOT')
+
+ASGI_APPLICATION = "config.asgi.application"
